@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"); /*  */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: o;
+  padding: 0;
+}
+
+/* ================================
+        Variables Define
+   ================================
+*/
+:root {
+  /* Color Variables*/
+  --primary-color: #f5c332;
+  --secondary-color: #231e41;
+  --white-color: #fff;
+  --black-color: #1c1c1c;
+
+  /* text color Variable  */
+  --text-primary: #f5c332;
+  --text-secondary: #231e41;
+  --text-white: #fff;
+  --text-color: #555;
+  --text-gray: #999;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0.425rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3.125rem;
+  margin-bottom: 3rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.75rem;
+  letter-spacing: 0.0625rem;
+}
+.main-btn {
+  padding: 0.625rem 1.875rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0 0.125rem 0.625rem rgb(0 0 0 /19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  border: 0.1875rem solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--black-color);
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+.wrapper {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2 {
+  color: var(--primary-color);
+}
+
+/* Navbar Design */
+.navigation-wrap.on-scroll {
+  background-color: var(--white-color);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navigation-wrap .navbar-brand img {
+  width: 13rem;
+}
+.navigation-wrap .nav-item {
+  padding: 0 0.625rem;
+  transition: all 2000ms linear;
+}
+
+.navigation-wrap .navbar-toggler:focus {
+  outline: none;
+  border: unset;
+  box-shadow: none;
+}
+
+.navigation-wrap .nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--text-secondary);
+  letter-spacing: 0.0625rem;
+}
+.navigation-wrap .main-btn {
+  padding: 0.3125rem 1.437rem;
+  box-shadow: none;
+  margin-left: 0.625rem;
+}
+
+/* Banner Design */
+.top-banner {
+  width: 100%;
+  background: url("../images/bg/bg-1.jpg") no-repeat center;
+  background-size: cover;
+  padding: 14rem 0 9.375rem;
+}
+
+/* Counter Design */
+.counter-section {
+  background-color: var(--secondary-color);
+  padding: 2.5rem 0;
+}
+
+.counter-section p {
+  color: var(--text-white);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* About  Section Design */
+
+.food-type {
+  padding-top: 3.25rem;
+}
+.food-type ul li {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 2rem;
+  position: relative;
+  margin-left: 1.875rem;
+}
+.food-type ul li::before {
+  position: absolute;
+  color: var(--text-primary);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  left: -2rem;
+  display: inline-block;
+  font-size: 1.25rem;
+}
+
+/* Story Section Design */
+
+.story-section {
+  width: 100%;
+  height: 28.125rem;
+  background: url("../images/bg/bg-2.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center;
+  padding-top: 6.25rem;
+}
+/* Explore food Design */
+.explore-food .card {
+  background: transparent;
+  border-radius: 0.937rem;
+  border: 0.125rem dashed var(--primary-color);
+}
+.explore-food .card img {
+  border-radius: 0.937rem 0.937rem 0 0;
+  object-fit: cover;
+}
+
+.explore-food .card span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid var(--primary-color);
+}
+
+.explore-food .card span del {
+  color: var(--text-gray);
+  margin-left: 0.5rem;
+}
+
+/* Testimonial Section */
+
+.testimonial-section {
+  background: url("../images/bg/bg-4.jpg") no-repeat center;
+  background-size: cover;
+}
+.testimonial-section .carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  background-color: var(--white-color);
+  border-radius: 0.9375rem;
+  text-align: center;
+}
+.testimonial-section .carousel-item img {
+  max-width: 5rem;
+  border-radius: 50%;
+  padding: 0.3125rem;
+  border: 0.125rem solid var(--primary-color);
+}
+.testimonial-section .carousel-item .carousel-caption p {
+  font-size: 1.3125rem;
+  line-height: 2.0625rem;
+  padding: 0.625rem 11%;
+}
+.testimonial-section .carousel-item .carousel-caption h5 {
+  color: var(--text-primary);
+}
+
+.testimonial-section .carousel-indicators {
+  bottom: -4.9125rem;
+}
+
+.testimonial-section .carousel-indicators button {
+  width: 0.9275rem;
+  height: 0.9275rem;
+  border-radius: 50%;
+}
+
+/* Team section Design */
+
+.team-section .card {
+  background-color: var(--black-color);
+  border-radius: 0.625rem;
+  border: 0.25rem solid var(--primary-color);
+  text-align: center;
+}
+
+.team-section .card img {
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.team-section h4 {
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.team-section h6,
+.team-section p {
+  color: var(--text-white);
+}
+
+.team-section .social-icon i {
+  font-size: 1.125rem;
+  transition: 0.3s all ease;
+  margin: 0.3125rem;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  color: var(--text-white);
+  height: 2.1875rem;
+  width: 2.1875rem;
+  line-height: 2.1875rem;
+}
+.team-section .social-icon i:hover {
+  background-color: var(--text-white);
+  color: var(--text-primary);
+}
+
+/* Book Food Design */
+
+.book-food {
+  width: 100%;
+  background: url("../images/bg/bg-3.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 4.375rem 0;
+  background-position: 0 4.4945rem;
+}
+
+/* Download App Design */
+.download-app {
+  width: 100%;
+  background: url("../images/bg/bg-5.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* Footer Design */
+.footer {
+  background-color: var(--black-color);
+}
+
+.footer .footer-link {
+  font-size: 1rem;
+  color: var(--text-white);
+  padding: 0 1.875rem;
+}
+
+.footer a {
+  font-size: 1.5rem;
+  color: var(--text-white);
+  padding: 0 1rem;
+}
